@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>进度条滚动</title>
+	<script type="text/javascript" src="./js/jquery1.8.3.js"></script>
+	<script type="text/javascript" src="./js/processAnimate.js"></script>
+	<style type="text/css">
+	.processAnimate{
+	  overflow: hidden;
+	  width: 44px;
+	  line-height: 44px;
+	  display: inline-block;
+	  font-size: 12px;
+	  color: #434343;
+	  background-image: url("./investjd.png");
+	  background-repeat: no-repeat;
+	}
+	</style>
+</head>
+<body>
+	<div class="processAnimate" data-setting='{"autoPlay":true,"num":"20","speed":1,"growth":1,"height":"44px"}'></div>
+	<div class="processAnimate" data-setting='{"autoPlay":true,"num":"40","speed":2,"growth":5,"height":"44px"}'></div>
+	<div class="processAnimate" data-setting='{"autoPlay":true,"num":"50","speed":5,"growth":10,"height":"44px"}'></div>
+	<div class="processAnimate" data-setting='{"autoPlay":false,"num":"70","speed":5,"growth":0,"height":"44px"}'></div>
+	<div class="processAnimate" data-setting='{"autoPlay":true,"num":"90","speed":5,"growth":5,"height":"44px"}'></div>
+	<script type="text/javascript">
+		$(function(){
+			processAnimate.init($('.processAnimate'));
+		});
+	</script>
+</body>
+</html>
